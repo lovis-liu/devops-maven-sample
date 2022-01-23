@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-
+}
 
         stage('build & push') {
             steps {
@@ -119,4 +119,3 @@ pipeline {
         }
     }
 }
-
