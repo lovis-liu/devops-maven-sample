@@ -44,7 +44,7 @@ pipeline {
 
         stage('push latest') {
             when {
-                branch 'master'
+                branch 'sonarqube'
             }
             steps {
                 container('maven') {
@@ -56,7 +56,7 @@ pipeline {
 
         stage('deploy to dev') {
             when {
-                branch 'master'
+                branch 'sonarqube'
             }
             steps {
                 input(id: 'deploy-to-dev', message: 'deploy to dev?')
